@@ -10,11 +10,10 @@ import Footer from './components/Footer';
 
 
 function App() {
-  const pingBackend = async () => {
-    const {data} = await axios.get('https://aminecode.herokuapp.com/');
-    console.log(data);
+  const pingBackend = () => {
+    axios.get('https://aminecode.herokuapp.com/');
   }
-  
+
   useEffect(() => {
     pingBackend();
   }, []);

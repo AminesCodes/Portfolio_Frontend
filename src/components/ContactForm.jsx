@@ -15,7 +15,7 @@ export default function ContactForm() {
 
         if (email && message) {
             try {
-                const { data } = await axios.post('/api/contact/send', {name, email, subject, message});
+                const { data } = await axios.post('https://aminecode.herokuapp.com/api/contact/send', {name, email, subject, message});
                 if (data.status === 'success') {
                     window.alert('Message successfully sent');
                     setName('');
