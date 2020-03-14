@@ -1,3 +1,10 @@
+
+
+html, body, #root {
+  height: 100;
+  overflow: scroll;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +12,102 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  color: #eeeeee;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.appSectionDark {
+  background-color: #1f1d20e5;
+  /* min-height: 80vh; */
+}
+
+.appSectionLight {
+  background-color: #ffffffe5;
+  /* min-height: 80vh; */
+  color: black;
+}
+
+.smallIcon {
+  cursor: pointer;
+  width: 5vh;
+  margin: 0 3vh;
+  fill: #00adb5
+}
+
+.navIcon {
+  cursor: pointer;
+  height: 5vh;
+  fill: #00adb5;
+}
+
+.navIcon:hover, .smallIcon:hover {
+  fill: #eeeeee;
+  /* background-color: #00adb5;
+  border-radius: 20%; */
+}
+
+.stickyTop {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.projectImage {
+  width: 100%;
+  margin: auto;
+}
+
+.btnClear {
+  background-color: transparent;
+  border: transparent
+}
+
+.skillIconSm {
+  max-width: 20vmax;
+  min-width: 15vmax;
+}
+
+.skillIconLg {
+  max-width: 13vmax;
+  min-width: 10vmax;
+}
+
+.emailLink {
+  color: #00adb5;
+  font-weight: bolder;
+}
+
+.emailLink:hover {
+  color: #eeeeee;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.textLink {
+  color: #00adb5;
+  font-weight: bolder;
+  /* text-decoration: underline; */
+  border-bottom: dashed thin;
+}
+
+.fullName {
+
+}
+
+.logo {
+  height: 6vh;
+}
+
+.visible {
+  visibility: visible;
+  font-weight: bolder;
+}
+
+.invisible {
+  visibility: hidden;
 }
