@@ -10,13 +10,6 @@ import projects from '../assets/projects/projects';
 
 
 export default function Projects(props) {
-    projects[0].image = require('../assets/apps_images/Fashion_Footprint.png');
-    projects[1].image = require('../assets/apps_images/SuitApp.png');
-    projects[2].image = require('../assets/apps_images/Escape_The_Dungeon.png');
-    projects[3].image = require('../assets/apps_images/Pokemon_Battle.png');
-    projects[4].image = require('../assets/apps_images/Memory_Game.png');
-    projects[5].image = require('../assets/apps_images/Tic_Tac_Toe.png');
-    
     const [ screenWidth, setScreenWidth ] = useState(window.innerWidth);
     
     const handleResize = () => {

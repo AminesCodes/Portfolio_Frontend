@@ -28,7 +28,7 @@ export default function ProjectCardLeft(props) {
                     </div>
                 </div>
                 <div className='col-sm-5 d-flex align-items-center justify-content-center'>
-                    <img src={props.project.image} className='card-img projectImage my-auto' alt={props.project.image} />
+                    <img src={props.project.image} className='card-img projectImage my-auto' alt={props.project.title} />
                 </div>
             </div>
         </div>

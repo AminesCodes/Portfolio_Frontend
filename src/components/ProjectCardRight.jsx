@@ -8,7 +8,7 @@ export default function ProjectCardRight(props) {
         <div className='card mb-3 bg-dark'>
             <div className='row no-gutters'>
                 <div className='col-sm-5 d-flex align-items-center justify-content-center'>
-                    <img src={props.project.image} className='card-img projectImage my-auto' alt={props.project.image} />
+                    <img src={props.project.image} className='card-img projectImage my-auto' alt={props.project.title} />
                 </div>
                 <div className='col-sm-7 d-flex flex-column justify-content-between'>
                     <div className='card-body'>
