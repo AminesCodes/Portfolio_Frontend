@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 import NavBar from './components/NavBar';
 import Home from './components/Home';
@@ -9,20 +10,26 @@ import Footer from './components/Footer';
 
 
 function App() {
+  const pingBackend = async () => {
+    const {data} = await axios.get('https://aminecode.herokuapp.com/');
+    console.log(data);
+  }
+  
+  useEffect(() => {
+    pingBackend();
+  }, []);
+
   const [ navBarHeight, setNavBarHeight ] = useState(0);
   const [ footerHeight, setFooterHeight ] = useState(0);
   const [ screenHeight, setScreenHeight ] = useState(0);
-  const [ navIconsHeight, setNavIconsHeight ] = useState(0);
-  const [ sectionHeight, setSectionHeight ] = useState(0);
   const [ sectionInnerH, setSectionInnerH ] = useState(0);
 
   const getNavBarHeight = dim => {
-    setNavBarHeight(dim)
+    setNavBarHeight(dim);
   }
 
   const getFooterHeight = dim => {
-    setFooterHeight(dim)
-    setNavIconsHeight(dim)
+    setFooterHeight(dim);
   }
 
   const getScreenHeight = dim => {
@@ -30,7 +37,6 @@ function App() {
   }
 
   useEffect(() => {
-    setSectionHeight(screenHeight - (navBarHeight + footerHeight));
     setSectionInnerH(screenHeight 
       - (navBarHeight + footerHeight 
           + 2 * 16 // p-3 of container div is 1rem = 16px
