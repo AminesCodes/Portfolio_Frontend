@@ -3,7 +3,6 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import ProjectCardRight from './ProjectCardRight';
 import ProjectCardLeft from './ProjectCardLeft';
-import { ReactComponent as HomeIcon } from '../assets/nav_icons/home-solid.svg';
 import { ReactComponent as UpArrow } from '../assets/nav_icons/arrow-alt-circle-up-solid.svg';
 import { ReactComponent as DownArrow } from '../assets/nav_icons/arrow-alt-circle-down-solid.svg';
 import projects from '../assets/projects/projects';
@@ -52,14 +51,10 @@ export default function Projects(props) {
     return(
         <section className='container-fluid px-3 pb-3' id='projects' style={style}>
             <div style={{height: props.navBarH}}></div>
-            <div className='d-flex justify-content-between'>
-                <AnchorLink href='#home'>
-                    <HomeIcon className='navIcon'/>
-                </AnchorLink>
-                <AnchorLink href='#skills'>
+                <AnchorLink className='d-block text-right' href='#skills'>
                     <UpArrow className='navIcon'/>
                 </AnchorLink>
-            </div>
+            
             <div className='container-md appSectionDark mx-3-auto' style={{minHeight: `${h}px`}}>
                 { screenWidth < 576
                     ? projects.map((project) => <ProjectCardRight key={project.title} project={project}/>)
@@ -71,11 +66,10 @@ export default function Projects(props) {
                         })
                 }
             </div>
-            <div className='text-right'>
-                <AnchorLink href='#contact'>
-                    <DownArrow className='navIcon'/>
-                </AnchorLink>
-            </div>
+
+            <AnchorLink className='d-block text-right' href='#contact'>
+                <DownArrow className='navIcon'/>
+            </AnchorLink>
         </section>
     )
 }

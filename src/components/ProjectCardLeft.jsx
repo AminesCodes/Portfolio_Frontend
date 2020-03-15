@@ -7,10 +7,10 @@ export default function ProjectCardLeft(props) {
     return (
         <div className='card mb-3 bg-dark'>
             <div className='row no-gutters'>
-                <div className='col-sm-7 d-flex flex-column justify-content-between'>
+                <div className='col-md-7 d-flex flex-column justify-content-between py-3 px-5'>
                     <div className='card-body'>
                         <h5 className='card-title text-center'>{props.project.title}</h5>
-                        <p className='card-text'>{props.project.description}</p>
+                        <p className='card-text textJustify'>{props.project.description}</p>
                     </div>
                     <div className='text-center mb-2'>
                         <span className='font-weight-bold'>Techs:</span> {props.project.techs}
@@ -27,8 +27,8 @@ export default function ProjectCardLeft(props) {
                         }
                     </div>
                 </div>
-                <div className='col-sm-5 d-flex align-items-center justify-content-center'>
-                    <img src={props.project.image} className='card-img projectImage my-auto' alt={props.project.title} />
+                <div className='col-md-5 d-flex align-items-center justify-content-center p-4'>
+                    <img src={props.project.image} className='card-img projectImage my-auto projectImage' alt={props.project.title} />
                 </div>
             </div>
         </div>

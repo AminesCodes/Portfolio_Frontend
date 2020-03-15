@@ -39,7 +39,7 @@ export default function ContactForm() {
                     <label> Name:
                         <input 
                             type='text' 
-                            className='form-control' 
+                            className='form-control textInput' 
                             placeholder='Name (Optional)' 
                             value={name}
                             onChange={e => setName(e.target.value)}
@@ -53,7 +53,7 @@ export default function ContactForm() {
                     <label> Email: <span className='h6 text-danger font-italic'>(Required)</span>
                         <input 
                             type='email' 
-                            className='form-control' 
+                            className='form-control textInput' 
                             placeholder='Enter your email' 
                             value={email}
                             onChange={e => setEmail(e.target.value)}
@@ -67,7 +67,7 @@ export default function ContactForm() {
                     <label> Subject:
                         <input 
                             type='text' 
-                            className='form-control' 
+                            className='form-control textInput' 
                             placeholder='Subject (Optional)' 
                             value={subject}
                             onChange={e => setSubject(e.target.value)}
@@ -81,7 +81,7 @@ export default function ContactForm() {
                     <label htmlFor='message' className='w-100'>Message: 
                         <span className='h6 text-danger font-italic'> (Required)</span>
                         <textarea 
-                            className='form-control mb-2 mr-sm-2'
+                            className='form-control mb-2 mr-sm-2 textInput'
                             placeholder='Enter your message here' 
                             value={message}
                             onChange={e => setMessage(e.target.value)}

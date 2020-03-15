@@ -2,7 +2,7 @@ import React from 'react';
 
 export default (props) => {
     return (
-        <div className='h-100' 
+        <div className='h-100 textJustify p-3' 
             onMouseLeave={() => props.handleHover(false)} 
             onClick={() => props.handleHover(false)}
         >

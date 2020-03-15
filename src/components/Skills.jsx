@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-import { ReactComponent as HomeIcon } from '../assets/nav_icons/home-solid.svg';
 import { ReactComponent as UpArrow } from '../assets/nav_icons/arrow-alt-circle-up-solid.svg';
 import { ReactComponent as DownArrow } from '../assets/nav_icons/arrow-alt-circle-down-solid.svg';
 
@@ -70,14 +69,10 @@ export default function Skills(props) {
     return(
         <section className='container-fluid px-3 pb-3' id='skills' style={style}>
             <div style={{height: props.navBarH}}></div>
-            <div className='d-flex justify-content-between'>
-                <AnchorLink href='#home'>
-                    <HomeIcon className='navIcon'/>
-                </AnchorLink>
-                <AnchorLink href='#home'>
-                    <UpArrow className='navIcon'/>
-                </AnchorLink>
-            </div>
+            <AnchorLink className='d-block text-right' href='#home'>
+                <UpArrow className='navIcon'/>
+            </AnchorLink>
+            
             <div className='container-md appSectionLight mx-3-auto' style={{minHeight: `${h}px`}}>
                 <div className='text-center h2 pt-3'>Some of the tools I like to work with</div>
                 <div className='row justify-content-sm-center mx-auto text-center'>
@@ -87,11 +82,10 @@ export default function Skills(props) {
                     }
                 </div>
             </div>
-            <div className='text-right'>
-                <AnchorLink href='#projects'>
-                    <DownArrow className='navIcon'/>
-                </AnchorLink>
-            </div>
+
+            <AnchorLink className='d-block text-right' href='#projects'>
+                <DownArrow className='navIcon'/>
+            </AnchorLink>
         </section>
     )
 }

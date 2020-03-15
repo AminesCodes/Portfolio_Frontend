@@ -116,3 +116,15 @@ code {
 .invisible {
   visibility: hidden;
 }
+
+.textJustify {
+  text-align: justify;
+}
+
+.projectImage {
+  box-shadow: 1rem 1rem 1rem #00adb5;
+}
+
+.textInput {
+  box-shadow: .35rem .15rem 1rem #00adb5;
+}

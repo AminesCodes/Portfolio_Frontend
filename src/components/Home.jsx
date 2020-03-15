@@ -4,8 +4,6 @@ import ReactCardFlip from 'react-card-flip';
 
 import HomeCardFront from './HomeCardFront';
 import HomeCardBack from './HomeCardBack';
-// import { ReactComponent as HomeIcon } from '../assets/nav_icons/home-solid.svg';
-// import { ReactComponent as UpArrow } from '../assets/nav_icons/arrow-alt-circle-up-solid.svg';
 import { ReactComponent as DownArrow } from '../assets/nav_icons/arrow-alt-circle-down-solid.svg';
 
 const appLogo = require('../assets/Portfolio_Icon.png');
@@ -30,22 +28,13 @@ export default function Home(props) {
     return(
         <section className='container-fluid p-3' id='home' style={style}>
             <div style={{height: props.navBarH}}></div>
-            {/* <div className='d-flex justify-content-between stickyTop'>
-                <AnchorLink href='#home'>
-                    <HomeIcon className='navIcon'/>
-                </AnchorLink>
-                <AnchorLink href='#home'>
-                    <UpArrow className='navIcon'/>
-                </AnchorLink>
-            </div> */}
-
             <div className='container-md appSectionDark mx-3-auto' style={{minHeight: `${h}px`}}>
                 <div className='row' style={{minHeight: `${h}px`}}>
-                    <div className='col-sm-6 my-auto text-center'>
+                    <div className='col-sm-5 my-auto text-center'>
                         <img className='d-block mx-auto w-75' src={appLogo} alt='App logo'/>
                     </div>
 
-                    <div className='col-sm-6 my-auto text-center h-100'>
+                    <div className='col-sm-7 my-auto text-center h-100'>
                         <ReactCardFlip isFlipped={isCardFlipped} flipDirection="vertical">
                             <HomeCardFront handleHover={handleHover} />
                             <HomeCardBack handleHover={handleHover} />
@@ -54,11 +43,9 @@ export default function Home(props) {
                 </div>
             </div>
 
-            <div className='text-right'>
-                <AnchorLink href='#skills'>
-                    <DownArrow className='navIcon'/>
-                </AnchorLink>
-            </div>
+            <AnchorLink className='d-block text-right' href='#skills'>
+                <DownArrow className='navIcon'/>
+            </AnchorLink>
         </section>
     )
 }
