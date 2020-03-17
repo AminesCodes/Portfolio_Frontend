@@ -91,7 +91,6 @@ code {
 .textLink {
   color: #00adb5;
   font-weight: bolder;
-  /* text-decoration: underline; */
   border-bottom: dashed thin;
 }
 
@@ -102,6 +101,12 @@ code {
 
 .logo {
   height: 6vh;
+}
+
+.greeting {
+  color: #00adb5;
+  font-weight: bold;
+  margin-bottom: 2rem;
 }
 
 .visible {
