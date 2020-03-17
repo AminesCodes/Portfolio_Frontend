@@ -17,7 +17,7 @@ const projects = [
     },
     {
       title: "Escape The Dungeon",
-      image: "/images/Fashion_Footprint.png",
+      image: "/images/Escape_The_Dungeon.png",
       description: "A three level word puzzle game designed to improve vocabulary and spelling skills, where the player guesses a word by clicking letters",
       techs: "Pure Javascript, HTML and CSS - Frontend application",
       live: "https://aminescodes.github.io/Pursuit-Core-Web-Hangman-Weekly-Assignment/",

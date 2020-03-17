@@ -72,9 +72,9 @@ export default function Skills(props) {
             <AnchorLink className='d-block text-right' href='#home'>
                 <UpArrow className='navIcon'/>
             </AnchorLink>
-            
+
             <div className='container-md appSectionLight mx-3-auto' style={{minHeight: `${h}px`}}>
-                <div className='text-center h2 pt-3'>Some of the tools I like to work with</div>
+                <div className='text-center h2 pt-3'>My Stack:</div>
                 <div className='row justify-content-sm-center mx-auto text-center'>
                     { screenWidth < 700
                         ? smallScreen
