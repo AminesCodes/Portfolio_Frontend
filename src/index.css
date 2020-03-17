@@ -95,13 +95,9 @@ code {
   border-bottom: dashed thin;
 }
 
-.card-title {
+.cardTitle {
   color: #00adb5;
   font-weight: bolder;
-}
-
-.fullName {
-
 }
 
 .logo {

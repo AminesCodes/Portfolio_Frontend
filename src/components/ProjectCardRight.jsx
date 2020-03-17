@@ -12,7 +12,7 @@ export default function ProjectCardRight(props) {
                 </div>
                 <div className='col-md-7 d-flex flex-column justify-content-between py-3 px-5'>
                     <div className='card-body'>
-                        <h5 className='card-title text-center'>{props.project.title}</h5>
+                        <h5 className='cardTitle text-center'>{props.project.title}</h5>
                         <p className='card-text textJustify'>{props.project.description}</p>
                     </div>
                     <div className='text-center mb-2'>

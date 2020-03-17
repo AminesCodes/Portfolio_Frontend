@@ -14,7 +14,7 @@ export default (props) => {
 
     return (
         <div className='h-100'>
-            <p className='font-weight-bold'>Hello world! <span className={display}>_</span></p>
+            <p className='h3 font-weight-bold'>Hello world! <span className={display}>_</span></p>
             <p>I'm Amine Bensalem, <br/>
                 a New York City based <br/>
                 Software Engineer. <br/>
