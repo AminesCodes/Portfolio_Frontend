@@ -1,10 +1,8 @@
 import React, { useState, useLayoutEffect, useRef } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-
+import {OverlayTrigger, Tooltip} from 'react-bootstrap';
 
 export default function NavBar(props) {
-    // converting a google doc link to display s PDF: replace “edit?usp=sharing” with “export?format=pdf” instead for downloads.
-    // const resumeLink = 'https://docs.google.com/document/d/1A75G5Urpa5YaF1UQyGV8d40DbU5yuJeeOCxUZKT-SGM/edit?usp=sharing';
     const resumeLink = 'https://docs.google.com/document/d/e/2PACX-1vSF4FvKzXrb2uDDzqOwN_JBDpizFsZ4ACTE_UCEqE4JrBslGKgILUt_CNLz2dVNpDSvSD16rts79OWK/pub';
     
     const [ dimension, setDimension ] = useState({});
@@ -18,9 +16,17 @@ export default function NavBar(props) {
 
     return (
         <nav ref={targetRef} className='navbar navbar-expand-md navbar-dark bg-dark position-fixed w-100' id='navbar' style={{zIndex: '5'}}>
-            <AnchorLink className='navbar-brand' href='#home'>
-                <img className='img-fluid logo' src={require('../assets/Portfolio_Icon.png')} alt='app logo'/>
-            </AnchorLink>
+            <OverlayTrigger
+                placement='right'
+                overlay={
+                    <Tooltip id={`tooltip-top`}><strong>Home</strong></Tooltip>
+                }
+            >
+                <AnchorLink className='navbar-brand' href='#home'>
+                    <img className='img-fluid logo' src={require('../assets/Portfolio_Icon.png')} alt='app logo'/>
+                </AnchorLink>
+            </OverlayTrigger>
+            
             <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#collapsibleNavbar'>
                 <span className='navbar-toggler-icon'></span>
             </button>

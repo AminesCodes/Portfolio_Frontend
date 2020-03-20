@@ -4,7 +4,7 @@ const projects = [
       image: "/images/Fashion_Footprint.png",
       description: "A Full-Stack app designed to reduce the error of trends prediction into the Fashion Industry which is the second-most polluter and water consumer worldwide. Fashion Footprint was founded to reduce the overproduction in the Fashion industry is estimate to 30% by allowing customers to choose the trends and styles they want to see in stores for future seasons.",
       techs: "Backend: Postgres, Express. Frontend Node, React, mix of Bootstrap and CSS",
-      live: "",
+      live: "https://fashion-fprint.herokuapp.com/",
       github: "https://github.com/AminesCodes/Fashion-Sustainability",
     },
     {
