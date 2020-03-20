@@ -10,7 +10,7 @@ export default function ProjectCardRight(props) {
                 <div className='col-md-5 d-flex align-items-center justify-content-center p-4'>
                     <img src={props.project.image} className='card-img projectImage my-auto projectImage' alt={props.project.title} />
                 </div>
-                <div className='col-md-7 d-flex flex-column justify-content-between py-3 px-5'>
+                <div className='col-md-7 d-flex flex-column justify-content-between py-3 px-4'>
                     <div className='card-body'>
                         <h5 className='cardTitle text-center'>{props.project.title}</h5>
                         <p className='card-text textJustify'>{props.project.description}</p>

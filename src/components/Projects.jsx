@@ -56,7 +56,8 @@ export default function Projects(props) {
                 </AnchorLink>
             
             <div className='container-md appSectionDark mx-3-auto' style={{minHeight: `${h}px`}}>
-                { screenWidth < 576
+                <div className='text-center h2 cardTitle'>Some of my projects</div>
+                { screenWidth < 768
                     ? projects.map((project) => <ProjectCardRight key={project.title} project={project}/>)
                     : projects.map((project, i) => {
                         if (i % 2) {

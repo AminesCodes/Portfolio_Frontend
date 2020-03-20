@@ -7,7 +7,7 @@ export default function ProjectCardLeft(props) {
     return (
         <div className='card mb-3 bg-dark'>
             <div className='row no-gutters'>
-                <div className='col-md-7 d-flex flex-column justify-content-between py-3 px-5'>
+                <div className='col-md-7 d-flex flex-column justify-content-between py-3 px-4'>
                     <div className='card-body'>
                         <h5 className='cardTitle text-center'>{props.project.title}</h5>
                         <p className='card-text textJustify'>{props.project.description}</p>
