@@ -10,8 +10,9 @@ export default (props) => {
             <p>This curiosity and passion led me to a Bachelor of science in automation engineering technology.</p>  
             <p>Seeking new challenges and a career shift after moving to New York City, 
                 while keeping the problem solving aspect that I enjoy, 
-                I enrolled into an intensive full-stack web development fellowship program at Pursuit 
-                where I gained exposure to different coding languages through project based learning.
+                I enrolled into an intensive and highly selective full-stack web development fellowship program at Pursuit 
+                where I gained the necessary technical and professional skills through project based learning and team work
+                to be a successful software engineer.
             </p>
         </div>
     )
