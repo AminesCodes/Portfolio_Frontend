@@ -1,14 +1,16 @@
 import React from 'react';
+import {OverlayTrigger, Tooltip} from 'react-bootstrap';
 
 import { ReactComponent as GithubIcon } from '../assets/nav_icons/github-brands.svg';
 import { ReactComponent as PlayIcon } from '../assets/nav_icons/play-circle-solid.svg';
+
 
 export default function ProjectCardRight(props) {
     return (
         <div className='card mb-3 bg-dark'>
             <div className='row no-gutters'>
                 <div className='col-md-5 d-flex align-items-center justify-content-center p-4'>
-                    <img src={props.project.image} className='card-img projectImage my-auto projectImage' alt={props.project.title} />
+                    <img src={props.project.image} className='card-img projectImage my-auto' alt={props.project.title} />
                 </div>
                 <div className='col-md-7 d-flex flex-column justify-content-between py-3 px-4'>
                     <div className='card-body'>
@@ -20,11 +22,26 @@ export default function ProjectCardRight(props) {
                     </div>
                     <div className='d-flex justify-content-between mb-2'>
                         <a href={props.project.github} target='_blank' rel='noopener noreferrer'>
-                            <GithubIcon className='smallIcon'/>
+                            <OverlayTrigger
+                                placement='top'
+                                overlay={
+                                    <Tooltip id={`tooltip-top`}><strong>Github</strong></Tooltip>
+                                }
+                            >
+                                <GithubIcon className='smallIcon'/>
+                            </OverlayTrigger>
                         </a>
                         { props.project.live.length
                             ? <a href={props.project.live} target='_blank' rel='noopener noreferrer'>
-                                <PlayIcon className='smallIcon'/>
+                                {/* <PlayIcon className='smallIcon mb-2'/> */}
+                                    <OverlayTrigger
+                                        placement='top'
+                                        overlay={
+                                            <Tooltip id={`tooltip-top`}><strong>Live</strong></Tooltip>
+                                        }
+                                    >
+                                        <PlayIcon className='smallIcon mb-2'/>
+                                    </OverlayTrigger>
                                 </a>
                             : null
                         }

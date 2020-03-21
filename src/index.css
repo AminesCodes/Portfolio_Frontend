@@ -123,7 +123,7 @@ code {
 }
 
 .projectImage {
-  box-shadow: 1rem 1rem 1rem #00adb5;
+  box-shadow: .35rem .35rem 1rem #00adb5;
 }
 
 .textInput {
