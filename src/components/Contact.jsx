@@ -27,8 +27,8 @@ export default function Contact(props) {
                     <div className='text-center h2 pt-3'>Get in touch</div>
                     <div className='text-center h4 pt-3'>Feel free to reach out via the contact form</div>
                     <ContactForm />
-                    <p className='text-center mt-3'>You can also use your email client</p>
-                    <a className='d-block text-center mx-2 px-2 emailLink' 
+                    <p className='text-center mt-2'>You can also use your email client</p>
+                    <a className='d-block text-center mx-2 mb-2 px-2 emailLink' 
                         href='mailto:aminebensalem@pursuit.org'
                         target='_blank' rel='noopener noreferrer'
                         >

@@ -34,60 +34,58 @@ export default function ContactForm() {
     return (
         // <form className='was-validated' onSubmit={handleSubmitForm}>
         <form className='' onSubmit={handleSubmitForm}>
-            <div className='row md-form px-4 pt-4'>
-                <div className='form-group col-sm-4'>
-                    <label> Name:
-                        <input 
-                            type='text' 
-                            className='form-control textInput' 
-                            placeholder='Name (Optional)' 
-                            value={name}
-                            onChange={e => setName(e.target.value)}
-                             />
-                    </label>
+            <div className='row md-form px-2 pt-3'>
+                <div className='form-group col-sm-3'>
+                    <label htmlFor='nameField'> Name:</label>
+                    <input 
+                        type='text'
+                        id='nameField'
+                        className='form-control textInput' 
+                        placeholder='Name (Optional)' 
+                        value={name}
+                        onChange={e => setName(e.target.value)} />
                     {/* <div className='valid-feedback'>Valid.</div>
                     <div className='invalid-feedback'>Please fill out this field.</div> */}
                 </div>
 
                 <div className='form-group col-sm-4'>
-                    <label> Email: <span className='h6 text-danger font-italic'>(Required)</span>
+                    <label htmlFor='emailField'> Email: <span className='h6 text-danger font-italic'>(Required)</span></label>
                         <input 
-                            type='email' 
+                            type='email'
+                            id='emailField'
                             className='form-control textInput' 
                             placeholder='Enter your email' 
                             value={email}
                             onChange={e => setEmail(e.target.value)}
                             required />
-                    </label>
                     <div className='valid-feedback'>Valid.</div>
                     <div className='invalid-feedback'>Please fill out this field.</div>
                 </div>
 
-                <div className='form-group col-sm-4'>
-                    <label> Subject:
+                <div className='form-group col-sm-5'>
+                    <label htmlFor='subjectField'> Subject:</label>
                         <input 
-                            type='text' 
+                            type='text'
+                            id='subjectField'
                             className='form-control textInput' 
                             placeholder='Subject (Optional)' 
                             value={subject}
-                            onChange={e => setSubject(e.target.value)}
-                             />
-                    </label>
+                            onChange={e => setSubject(e.target.value)} />
                     {/* <div className='valid-feedback'>Valid.</div>
                     <div className='invalid-feedback'>Please fill out this field.</div> */}
                 </div>
 
                 <div className='form-group col-sm-12 px-3'>
-                    <label htmlFor='message' className='w-100'>Message: 
-                        <span className='h6 text-danger font-italic'> (Required)</span>
+                    <label htmlFor='messageField' className='w-100'>Message: 
+                        <span className='h6 text-danger font-italic'> (Required)</span></label>
                         <textarea 
-                            className='form-control mb-2 mr-sm-2 textInput'
+                            className='form-control textInput'
+                            id='messageField'
                             placeholder='Enter your message here' 
                             value={message}
                             onChange={e => setMessage(e.target.value)}
                             rows='5'
                             required />
-                    </label>
                     <div className='valid-feedback'>Valid.</div>
                     <div className='invalid-feedback'>Please fill out this field.</div>
                 </div>
