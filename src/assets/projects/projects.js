@@ -13,7 +13,7 @@ const projects = [
       description: "A Full-Stack social media app founded on the idea of bringing together the most passionate and creative minds in the world of Cosplay and giving them the tools to reach a wide audience of fans who appreciate and celebrate their work",
       techs: "Backend: Postgres, Express. Frontend Node, React, mix of Bootstrap and CSS",
       live: "https://suit-app.herokuapp.com/",
-      github: "https://github.com/AminesCodes/React-Group-Project_Social-Media",
+      github: "https://github.com/AminesCodes/Suit-App-For-Heroku",
     },
     {
       title: "Escape The Dungeon",
