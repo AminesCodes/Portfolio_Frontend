@@ -16,6 +16,14 @@ const projects = [
       github: "https://github.com/AminesCodes/Suit-App-For-Heroku",
     },
     {
+      title: "TV Show WatchList",
+      image: "/images/TV_Show_WatchList.png",
+      description: "A Full-Stack app designed to helps people decide what to watch next, mostly by reading comments on a selected show or just by referring to how many users have watched it",
+      techs: "Backend: Postgres, Express. Frontend Node, React, mix of Bootstrap and CSS",
+      live: "https://tv-show-watchlist.herokuapp.com/",
+      github: "https://github.com/AminesCodes/TV-Show-WatchList",
+    },
+    {
       title: "Escape The Dungeon",
       image: "/images/Escape_The_Dungeon.png",
       description: "A three level word puzzle game designed to improve vocabulary and spelling skills, where the player guesses a word by clicking letters",
