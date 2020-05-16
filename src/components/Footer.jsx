@@ -40,7 +40,7 @@ export default function Footer(props) {
                     <Tooltip id={`tooltip-top`}><strong>LinkedIn</strong></Tooltip>
                 }
             >
-                <a href='https://www.linkedin.com/in/amine-bensalem-468791144/' target='_blank' rel='noopener noreferrer'>
+                <a href='https://www.linkedin.com/in/amine-bensalem' target='_blank' rel='noopener noreferrer'>
                     <LinkedInIcon className='smallIcon'/>
                 </a>
             </OverlayTrigger>
