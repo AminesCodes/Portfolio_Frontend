@@ -12,8 +12,9 @@ import Footer from './components/Footer';
 function App() {
   const pingBackend = () => {
     axios.get('https://aminecode.herokuapp.com/');
-    axios.get('https://suit-app.herokuapp.com/');
+    axios.get('https://endeavor-app.herokuapp.com/');
     axios.get('https://fashion-fprint.herokuapp.com/');
+    axios.get('https://suit-app.herokuapp.com/');
     axios.get('https://tv-show-watchlist.herokuapp.com/');
   }
 
