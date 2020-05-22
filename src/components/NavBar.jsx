@@ -2,9 +2,9 @@ import React, { useState, useLayoutEffect, useRef } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import {OverlayTrigger, Tooltip} from 'react-bootstrap';
 
-export default function NavBar(props) {
-    const resumeLink = 'https://docs.google.com/document/d/e/2PACX-1vSF4FvKzXrb2uDDzqOwN_JBDpizFsZ4ACTE_UCEqE4JrBslGKgILUt_CNLz2dVNpDSvSD16rts79OWK/pub';
-    
+import {resumeLink} from '../assets/projects/projects';
+
+export default function NavBar(props) {    
     const [ dimension, setDimension ] = useState({});
     const targetRef = useRef();
 
@@ -42,7 +42,7 @@ export default function NavBar(props) {
                         <AnchorLink className='nav-link mb-0 h6' href='#projects'>Projects</AnchorLink>
                     </li>
                     <li className='nav-item'>
-                        <a className='nav-link mb-0 h6' href={resumeLink} target='_self'>Resume</a>
+                        <a className='nav-link mb-0 h6' href={resumeLink} target='_blank' rel='noopener noreferrer'>Resume</a>
                     </li>
                     <li className='nav-item'>
                         <AnchorLink className='nav-link mb-0 h6' href='#contact'>Contact</AnchorLink>

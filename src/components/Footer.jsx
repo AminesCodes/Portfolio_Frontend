@@ -7,6 +7,8 @@ import { ReactComponent as LinkedInIcon } from '../assets/nav_icons/linkedin-bra
 import { ReactComponent as ContactIcon } from '../assets/nav_icons/envelope-open-text-solid.svg';
 import { ReactComponent as DownloadIcon } from '../assets/nav_icons/file-download-solid.svg';
 
+import {resumeLinkDownload} from '../assets/projects/projects';
+
 
 export default function Footer(props) {
     const [ dimension, setDimension ] = useState({});
@@ -18,9 +20,6 @@ export default function Footer(props) {
         props.getFooterHeight(dim.height);
     }, targetRef.current)
     
-    // converting a google doc link to display s PDF: replace “edit?usp=sharing” with “export?format=pdf” instead for downloads.
-    const resumeLink = 'https://docs.google.com/document/d/1A75G5Urpa5YaF1UQyGV8d40DbU5yuJeeOCxUZKT-SGM/export?format=pdf';
-
     return (
         <div ref={targetRef} className='fixed-bottom bg-dark d-flex justify-content-center' style={{height: '5vh'}}>
             <OverlayTrigger
@@ -62,7 +61,7 @@ export default function Footer(props) {
                     <Tooltip id={`tooltip-top`}><strong>Download Resume</strong></Tooltip>
                 }
             >
-                <a href={resumeLink}>
+                <a href={resumeLinkDownload}>
                     <DownloadIcon className='smallIcon'/>
                 </a>
             </OverlayTrigger>

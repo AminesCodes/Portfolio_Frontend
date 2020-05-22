@@ -5,7 +5,7 @@ import ProjectCardRight from './ProjectCardRight';
 import ProjectCardLeft from './ProjectCardLeft';
 import { ReactComponent as UpArrow } from '../assets/nav_icons/arrow-alt-circle-up-solid.svg';
 import { ReactComponent as DownArrow } from '../assets/nav_icons/arrow-alt-circle-down-solid.svg';
-import projects from '../assets/projects/projects';
+import { projects } from '../assets/projects/projects';
 
 
 export default function Projects(props) {

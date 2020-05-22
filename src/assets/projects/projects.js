@@ -55,6 +55,14 @@ const projects = [
       live: "https://aminescodes.github.io/Tic-Tac-Toe_HTML-version/",
       github: "https://github.com/AminesCodes/Tic-Tac-Toe_HTML-version",
     },
-]
+];
 
-module.exports = projects;
+const resumeLink = 'https://docs.google.com/document/d/1wf0qpzs62mBlnMD9G0s1TMLAPPE-MlTalJEO0arOuz8';
+// converting a google doc link to display s PDF: replace “edit?usp=sharing” with “export?format=pdf” instead for downloads.
+const resumeLinkDownload = 'https://docs.google.com/document/d/1wf0qpzs62mBlnMD9G0s1TMLAPPE-MlTalJEO0arOuz8/export?format=pdf';
+
+module.exports = {
+  projects, 
+  resumeLink,
+  resumeLinkDownload
+};
