@@ -57,7 +57,7 @@ const projects = [
     },
 ];
 
-const resumeLink = 'https://docs.google.com/document/d/1wf0qpzs62mBlnMD9G0s1TMLAPPE-MlTalJEO0arOuz8';
+const resumeLink = 'https://docs.google.com/document/d/e/2PACX-1vSi7zh_27IXMNB2KJ5dStB8C57fBdRtAM3daF03Db0SZ4l_qXFbkFOAvT5l4PrJ4fkc1z_8OUQWEdVI/pub';
 // converting a google doc link to display s PDF: replace “edit?usp=sharing” with “export?format=pdf” instead for downloads.
 const resumeLinkDownload = 'https://docs.google.com/document/d/1wf0qpzs62mBlnMD9G0s1TMLAPPE-MlTalJEO0arOuz8/export?format=pdf';
 
