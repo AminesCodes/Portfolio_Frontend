@@ -61,7 +61,7 @@ export default function Footer(props) {
                     <Tooltip id={`tooltip-top`}><strong>Download Resume</strong></Tooltip>
                 }
             >
-                <a href={resumeLinkDownload}>
+                <a href={resumeLinkDownload} download>
                     <DownloadIcon className='smallIcon'/>
                 </a>
             </OverlayTrigger>
