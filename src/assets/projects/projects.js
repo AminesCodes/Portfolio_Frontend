@@ -36,8 +36,8 @@ const projects = [
       image: "/images/Pokemon_Battle.png",
       description: "A simple battle simulator that loads random Pokemon form the Pokemon API with their specific information where the player can pick their Pokemon moves to attack the opponent Pokemon played by the computer.",
       techs: "Pure Javascript, HTML and CSS - Front end application",
-      live: "https://aminescodes.github.io/Pursuit-Core-Web-Loading-Data-from-Online-Assignment/",
-      github: "https://github.com/AminesCodes/Pursuit-Core-Web-Loading-Data-from-Online-Assignment",
+      live: "https://aminescodes.github.io/Pokemon-Battle-Simulator/",
+      github: "https://github.com/AminesCodes/Pokemon-Battle-Simulator",
     },
     {
       title: "Memory Game",
