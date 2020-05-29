@@ -12,7 +12,12 @@ export default (props) => {
                 while keeping the problem solving aspect that I enjoy, 
                 I enrolled into an intensive and highly selective full-stack web development fellowship program at Pursuit 
                 where I gained the necessary technical and professional skills, through project based learning and team work,
-                to be a successful software engineer.
+                to be a successful web developer.
+            </p>
+            <p>When I'm not in front of my computer, I'm even spending time with my family and taking care of my son
+                or fixing tings left and right (yes, I'm a handy man).
+                <br />
+                I also enjoy cycling when I get a chance to do it
             </p>
         </div>
     )
