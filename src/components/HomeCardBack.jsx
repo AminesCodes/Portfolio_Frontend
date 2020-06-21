@@ -17,7 +17,7 @@ export default (props) => {
             <p>When I'm not in front of my computer, I'm even spending time with my family and taking care of my son
                 or fixing tings left and right (yes, I'm a handy man).
                 <br />
-                I also enjoy cycling even if I do it once a while
+                I also enjoy cycling even if it's once in a while with all my responsibilities.
             </p>
         </div>
     )
