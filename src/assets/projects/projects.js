@@ -4,8 +4,8 @@ const projects = [
       image: "/images/Endeavor_Admin_Dashboard.jpg",
       description: "A Full-Stack volunteer management web app designed and built for Pursuit, a non-profit organization, handling events, volunteers and mentoring relations. This app gives the volunteer's manager tools to keep their work centralized in one place and instant email notification",
       techs: "Backend: Node, PostgreQSL, Express and SendGrid. Frontend: React, Chart.js, mix of Bootstrap and CSS",
-      live: "https://fashion-fprint.herokuapp.com/",
-      github: "https://github.com/AminesCodes/Fashion-Sustainability",
+      live: "https://endeavor-app.herokuapp.com/",
+      github: "https://github.com/Briahana-Mauge/Endeavor",
     },
     {
       title: "Fashion Footprint",
