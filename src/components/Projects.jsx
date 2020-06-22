@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { CSSTransitionGroup } from 'react-transition-group';
 
 import ProjectCardRight from './ProjectCardRight';
 import ProjectCardLeft from './ProjectCardLeft';
@@ -34,6 +33,7 @@ export default function Projects(props) {
         || document.body.clientHeight;
         
         props.getScreenHeight(height);
+        // eslint-disable-next-line
     }, [])
 
     useEffect(() => {
@@ -73,20 +73,14 @@ export default function Projects(props) {
 
             {
                 targetProject
-                ?   <CSSTransitionGroup
-                transitionName="example"
-                transitionAppear={true}
-                transitionAppearTimeout={500}
-                    >
-                        <div className='projectImageGifContainer'>
-                            <div className='text-right closeBtnContainer'>
-                                <CloseIcon className='closeNavIcon' onClick={() => setTargetProject(null)}/>
-                            </div>
-                            <img className='projectImageGif' src={targetProject.image} alt={targetProject.title}
-                            // <img className='projectImageGif' src={targetProject.gifImage} alt={targetProject.title}
-                            />
+                ?   <div className='projectImageGifContainer'>
+                        <div className='text-right closeBtnContainer'>
+                            <CloseIcon className='closeNavIcon' onClick={() => setTargetProject(null)}/>
                         </div>
-                    </CSSTransitionGroup>
+                        <img className='projectImageGif' src={targetProject.image} alt={targetProject.title}
+                        // <img className='projectImageGif' src={targetProject.gifImage} alt={targetProject.title}
+                        />
+                    </div>
                 :   null
             }
 

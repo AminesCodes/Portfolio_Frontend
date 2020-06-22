@@ -11,6 +11,7 @@ import {resumeLinkDownload} from '../assets/projects/projects';
 
 
 export default function Footer(props) {
+    // eslint-disable-next-line
     const [ dimension, setDimension ] = useState({});
     const targetRef = useRef();
 
@@ -18,6 +19,7 @@ export default function Footer(props) {
         const dim = targetRef.current.getBoundingClientRect()
         setDimension(dim);
         props.getFooterHeight(dim.height);
+        // eslint-disable-next-line
     }, targetRef.current)
     
     return (

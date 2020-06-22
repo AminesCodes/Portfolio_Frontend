@@ -4,7 +4,8 @@ import {OverlayTrigger, Tooltip} from 'react-bootstrap';
 
 import {resumeLink} from '../assets/projects/projects';
 
-export default function NavBar(props) {    
+export default function NavBar(props) {  
+    // eslint-disable-next-line  
     const [ dimension, setDimension ] = useState({});
     const targetRef = useRef();
 
@@ -12,6 +13,7 @@ export default function NavBar(props) {
         const dim = targetRef.current.getBoundingClientRect()
         setDimension(dim);
         props.getNavBarHeight(dim.height);
+        // eslint-disable-next-line
     }, targetRef.current)
 
     return (
