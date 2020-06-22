@@ -96,13 +96,12 @@ export default function Projects(props) {
 
             {
                 targetProject
-                ?   <div className='projectImageGifContainer'>
+                ?   <div className='projectImageGifContainer' style={{height: `${props.sectionInnerDivH}px`, top: `${props.navBarH}px`}}>
+                        {/* <div style={{height: props.navBarH}}></div> */}
                         <div className='text-right closeBtnContainer'>
                             <CloseIcon className='closeNavIcon' onClick={() => setTargetProject(null)}/>
                         </div>
-                        <img className='projectImageGif' src={targetProject.image} alt={targetProject.title}
-                        // <img className='projectImageGif' src={targetProject.gifImage} alt={targetProject.title}
-                        />
+                        <img className='projectImageGif' src={targetProject.gifImage || targetProject.image} alt={targetProject.title} style={{maxHeight: `${props.sectionInnerDivH}px`}}/>
                     </div>
                 :   null
             }
