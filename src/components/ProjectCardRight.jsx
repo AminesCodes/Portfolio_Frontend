@@ -6,22 +6,24 @@ import { ReactComponent as PlayIcon } from '../assets/nav_icons/play-circle-soli
 
 
 export default function ProjectCardRight(props) {
+    const { project } = props;
+
     return (
         <div className='card mb-3 bg-dark'>
             <div className='row no-gutters'>
                 <div className='col-md-5 d-flex align-items-center justify-content-center p-4'>
-                    <img src={props.project.image} className='card-img projectImage my-auto' alt={props.project.title} />
+                    <img src={project.image} className='card-img projectImage my-auto' alt={project.title} onClick={() => props.selectProject(project)} />
                 </div>
-                <div className='col-md-7 d-flex flex-column justify-content-between py-3 px-4'>
+                <div className='col-md-7 d-flex flex-column justify-content-between projectTextContainer'>
                     <div className='card-body'>
-                        <h5 className='cardTitle text-center'>{props.project.title}</h5>
-                        <p className='card-text textJustify'>{props.project.description}</p>
+                        <h5 className='cardTitle text-center'>{project.title}</h5>
+                        <p className='card-text text-justify'>{project.description}</p>
                     </div>
                     <div className='text-center mb-2'>
-                        <span className='font-weight-bold'>Techs:</span> {props.project.techs}
+                        <span className='font-weight-bold'>Techs:</span> {project.techs}
                     </div>
                     <div className='d-flex justify-content-between mb-2'>
-                        <a href={props.project.github} target='_blank' rel='noopener noreferrer'>
+                        <a href={project.github} target='_blank' rel='noopener noreferrer'>
                             <OverlayTrigger
                                 placement='top'
                                 overlay={
@@ -31,8 +33,8 @@ export default function ProjectCardRight(props) {
                                 <GithubIcon className='smallIcon'/>
                             </OverlayTrigger>
                         </a>
-                        { props.project.live.length
-                            ? <a href={props.project.live} target='_blank' rel='noopener noreferrer'>
+                        { project.live.length
+                            ? <a href={project.live} target='_blank' rel='noopener noreferrer'>
                                 {/* <PlayIcon className='smallIcon mb-2'/> */}
                                     <OverlayTrigger
                                         placement='top'

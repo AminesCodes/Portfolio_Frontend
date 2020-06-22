@@ -24,12 +24,16 @@ code {
 .appSectionDark {
   background-color: #1f1d20e5;
   /* min-height: 80vh; */
+  padding-right: 3rem;
+  padding-left: 3rem;
 }
 
 .appSectionLight {
   background-color: #ffffffe5;
   /* min-height: 80vh; */
   color: black;
+  padding-right: 3rem;
+  padding-left: 3rem;
 }
 
 .smallIcon {
@@ -60,6 +64,10 @@ code {
 .projectImage {
   width: 100%;
   margin: auto;
+}
+
+.projectImage:hover {
+  cursor: pointer;
 }
 
 .btnClear {
@@ -118,7 +126,7 @@ code {
   visibility: hidden;
 }
 
-.textJustify {
+.text-justify {
   text-align: justify;
 }
 
@@ -128,4 +136,92 @@ code {
 
 .textInput {
   box-shadow: .35rem .15rem 1rem #00adb5;
+}
+
+.projectImageGifContainer {
+  position: fixed;
+  max-width: 80vw;
+  max-height: 80vh;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.closeBtnContainer {
+  position: relative;
+  top: 0;
+  z-index: 3;
+}
+
+.projectImageGif {
+  position: relative;
+  top: -5vh;
+  max-width: 80vw;
+  max-height: 80vh;
+}
+
+.projectTextContainer {
+  padding: 1rem 1rem;
+}
+
+.closeNavIcon {
+  cursor: pointer;
+  height: 5vh;
+  fill: red;
+}
+
+.closeNavIcon:hover, .smallIcon:hover {
+  fill: #00adb5;
+}
+
+@media (max-width: 768px) {
+  .appSectionDark {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .appSectionLight {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .projectTextContainer {
+    padding: .5rem .5rem;
+  }
+
+  .projectImageGifContainer {
+    max-width: 100vw;
+  }
+
+  .projectImageGif {
+    max-width: 100vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .appSectionDark {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  .appSectionLight {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .appSectionDark {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .appSectionLight {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .projectTextContainer {
+    padding: 1rem 0;
+  }
 }

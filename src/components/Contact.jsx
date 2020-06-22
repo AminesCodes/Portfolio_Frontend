@@ -23,7 +23,7 @@ export default function Contact(props) {
                     <UpArrow className='navIcon'/>
                 </AnchorLink>
                 
-                <div className='container-md appSectionDark mx-3-auto' style={{minHeight: `${h}px`}}>
+                <div className='container-lg appSectionDark' style={{minHeight: `${h}px`}}>
                     <div className='text-center h2 pt-3'>Get in touch</div>
                     <div className='text-center h4 pt-3'>Feel free to reach out via the contact form</div>
                     <ContactForm />

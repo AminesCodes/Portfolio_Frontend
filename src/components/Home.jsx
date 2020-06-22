@@ -28,7 +28,7 @@ export default function Home(props) {
     return(
         <section className='container-fluid p-3' id='home' style={style}>
             <div style={{height: props.navBarH}}></div>
-            <div className='container-md appSectionDark mx-3-auto' style={{minHeight: `${h}px`}}>
+            <div className='container-lg appSectionDark' style={{minHeight: `${h}px`}}>
                 <div className='row' style={{minHeight: `${h}px`}}>
                     <div className='col-sm-5 my-auto text-center'>
                         <img className='d-block mx-auto w-75' src={appLogo} alt='App logo'/>
