@@ -74,16 +74,16 @@ export default function Projects(props) {
             {
                 targetProject
                 ?   <CSSTransitionGroup
-                        transitionName="example"
-                        transitionEnterTimeout={5000}
-                        transitionLeaveTimeout={3000}
+                transitionName="example"
+                transitionAppear={true}
+                transitionAppearTimeout={500}
                     >
                         <div className='projectImageGifContainer'>
                             <div className='text-right closeBtnContainer'>
                                 <CloseIcon className='closeNavIcon' onClick={() => setTargetProject(null)}/>
                             </div>
-                            {/* <img className='projectImageGif' src={targetProject.gifPic} alt={targetProject.title} /> */}
-                            <img className='projectImageGif' src={targetProject.image} alt={targetProject.title} 
+                            <img className='projectImageGif' src={targetProject.image} alt={targetProject.title}
+                            // <img className='projectImageGif' src={targetProject.gifImage} alt={targetProject.title}
                             />
                         </div>
                     </CSSTransitionGroup>
