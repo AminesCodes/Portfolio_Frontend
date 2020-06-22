@@ -61,15 +61,6 @@ code {
   top: 0;
 }
 
-.projectImage {
-  width: 100%;
-  margin: auto;
-}
-
-.projectImage:hover {
-  cursor: pointer;
-}
-
 .btnClear {
   background-color: transparent;
   border: transparent
@@ -131,8 +122,28 @@ code {
 }
 
 .projectImage {
+  width: 100%;
+  margin: auto;
   box-shadow: .35rem .35rem 1rem #00adb5;
 }
+
+.projectImage:hover {
+  cursor: pointer;
+  animation: glowing 1300ms infinite;
+}
+/*  */
+@keyframes glowing {
+  0% {
+    box-shadow: .15rem .15rem .25rem #00adb5;
+  }
+  50% {
+    box-shadow: .25rem .25rem .5rem #00adb5;
+  }
+  100% {
+    box-shadow: .35rem .35rem 1rem #00adb5;
+  }
+}
+/*  */
 
 .textInput {
   box-shadow: .35rem .15rem 1rem #00adb5;

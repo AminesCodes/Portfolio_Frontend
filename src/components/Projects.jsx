@@ -41,6 +41,29 @@ export default function Projects(props) {
         return () => window.addEventListener('resize', handleResize);
     });
 
+    useEffect(() => {
+        const handleEscapeBtn = (e) => {
+            if (e.key === 'Escape') {
+                setTargetProject(null);
+            }
+        }
+
+        const handleClick = (e) => {
+            if (e.target.className !== 'projectImageGif' && e.target.className !== 'card-img projectImage my-auto') {
+                setTargetProject(null);
+            }
+        }
+
+        window.addEventListener('keydown', handleEscapeBtn);
+        window.addEventListener('click', handleClick);
+
+        return () => {
+            window.addEventListener('keydown', handleEscapeBtn);
+            window.addEventListener('click', handleClick);
+        }
+    });
+
+
     const style = {
         background: `url(${require('../assets/coding-screen.png')}) no-repeat center center fixed`,
         WebkitBackgroundSize: 'cover',
