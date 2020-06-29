@@ -41,8 +41,8 @@ const projects = [
       // gifImage: "/gifs/_Demo.gif",
       description: "A three level word puzzle game designed to improve vocabulary and spelling skills, where the player guesses a word by clicking letters",
       techs: "Pure Javascript, HTML and CSS - Frontend application",
-      live: "https://aminescodes.github.io/Pursuit-Core-Web-Hangman-Weekly-Assignment/",
-      github: "https://github.com/AminesCodes/Pursuit-Core-Web-Hangman-Weekly-Assignment",
+      live: "https://aminescodes.github.io/Escape-The-Dungeon/",
+      github: "https://github.com/AminesCodes/Escape-The-Dungeon",
     },
     {
       title: "Pokemon Battle Simulator",
