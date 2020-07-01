@@ -24,7 +24,7 @@ export default function Projects(props) {
 
         setScreenWidth(width);
         props.getScreenHeight(height);
-        setTimeout(() => {}, 1000);
+        setTimeout(() => {}, 500);
     }
 
     useEffect(() => {
