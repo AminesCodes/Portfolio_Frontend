@@ -1,27 +1,27 @@
-import React, { useState, useLayoutEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import {OverlayTrigger, Tooltip} from 'react-bootstrap';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
 import { ReactComponent as GithubIcon } from '../assets/nav_icons/github-brands.svg';
 import { ReactComponent as LinkedInIcon } from '../assets/nav_icons/linkedin-brands.svg';
 import { ReactComponent as ContactIcon } from '../assets/nav_icons/envelope-open-text-solid.svg';
 import { ReactComponent as DownloadIcon } from '../assets/nav_icons/file-download-solid.svg';
 
-import {resumeLinkDownload} from '../assets/projects/projects';
+import { resumeLinkDownload } from '../assets/projects/projects';
+import { useCostumeDivHight } from '../getDimensionHook';
 
 
 export default function Footer(props) {
-    // eslint-disable-next-line
-    const [ dimension, setDimension ] = useState({});
-    const targetRef = useRef();
 
-    useLayoutEffect(() => {
-        const dim = targetRef.current.getBoundingClientRect()
-        setDimension(dim);
-        props.getFooterHeight(dim.height);
-        // eslint-disable-next-line
-    }, targetRef.current)
+    const [ divHight, targetRef ] = useCostumeDivHight();
     
+    useEffect(() => {
+        props.getFooterHeight(divHight);
+        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [divHight])
+    
+
     return (
         <div ref={targetRef} className='fixed-bottom bg-dark d-flex justify-content-center' style={{height: '5vh'}}>
             <OverlayTrigger

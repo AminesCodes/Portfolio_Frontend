@@ -1,5 +1,5 @@
 import React from 'react';
-import {OverlayTrigger, Tooltip} from 'react-bootstrap';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
 import { ReactComponent as GithubIcon } from '../assets/nav_icons/github-brands.svg';
 import { ReactComponent as PlayIcon } from '../assets/nav_icons/play-circle-solid.svg';

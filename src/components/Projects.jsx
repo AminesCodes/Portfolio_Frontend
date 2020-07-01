@@ -10,8 +10,8 @@ import { projects } from '../assets/projects/projects';
 
 
 export default function Projects(props) {
-    const [ screenWidth, setScreenWidth ] = useState(window.innerWidth);
     const [ targetProject, setTargetProject ] = useState(null);
+    const [ screenWidth, setScreenWidth ] = useState(window.innerWidth);
     
     const handleResize = () => {
         const width = window.innerWidth 

@@ -40,7 +40,7 @@ code {
   cursor: pointer;
   height: 5vh;
   margin: 0 3vh;
-  fill: #00adb5
+  fill: #00adb5;
 }
 
 .navIcon {
@@ -74,6 +74,10 @@ code {
 .skillIconLg {
   max-width: 13vmax;
   min-width: 10vmax;
+}
+
+.skillIconText {
+  font-weight: bolder;
 }
 
 .emailLink {

@@ -38,34 +38,13 @@ export default function Skills(props) {
         backgroundSize: 'cover',
     }
 
-    const smallScreen = <>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><ReactIcon /></div>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><JsIcon />Javascript</div>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><NodeIcon /></div>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><HtmlIcon /></div>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><CssIcon /></div>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><PostgresIcon /></div>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><ExpressIcon /></div>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><BootstrapIcon /></div>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><GitIcon /></div>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'><HerokuIcon /></div>
-        </>
-
-    const largeScreen = <>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><ReactIcon /></div>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><JsIcon />Javascript</div>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><NodeIcon /></div>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><HtmlIcon /></div>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><CssIcon /></div>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><PostgresIcon /></div>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><ExpressIcon /></div>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><BootstrapIcon /></div>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><GitIcon /></div>
-            <div className='col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'><HerokuIcon /></div>
-        </>
-
     const h = props.sectionInnerDivH - (2 * props.navIconH);
-    
+
+    const iconClassName = 
+        screenWidth > 700
+        ? 'col-6 col-md-4 col-lg-3 my-5 skillIconLg text-center'
+        : 'col-6 col-md-4 col-lg-3 my-5 skillIconSm text-center'
+
     return(
         <section className='container-fluid px-3 pb-3' id='skills' style={style}>
             <div style={{height: props.navBarH}}></div>
@@ -75,11 +54,17 @@ export default function Skills(props) {
 
             <div className='container-lg appSectionLight mx-3-auto' style={{minHeight: `${h}px`}}>
                 <div className='text-center h2 pt-3'>My Stack:</div>
-                <div className='row justify-content-sm-center mx-auto text-center'>
-                    { screenWidth < 700
-                        ? smallScreen
-                        : largeScreen
-                    }
+                <div className='row justify-content-center mx-auto text-center'>
+                    <div className={iconClassName}><ReactIcon /><span className='skillIconText'>React</span></div>
+                    <div className={iconClassName}><JsIcon /><span className='skillIconText'>Javascript</span></div>
+                    <div className={iconClassName}><NodeIcon /><span className='skillIconText'>Node</span></div>
+                    <div className={iconClassName}><HtmlIcon /><span className='skillIconText'>HTML</span></div>
+                    <div className={iconClassName}><CssIcon /><span className='skillIconText'>CSS</span></div>
+                    <div className={iconClassName}><PostgresIcon /><span className='skillIconText'>PostgreSQL</span></div>
+                    <div className={iconClassName}><ExpressIcon /><span className='skillIconText'>Express</span></div>
+                    <div className={iconClassName}><BootstrapIcon /><span className='skillIconText'>Bootstrap</span></div>
+                    <div className={iconClassName}><GitIcon /><span className='skillIconText'>Git</span></div>
+                    <div className={iconClassName}><HerokuIcon /><span className='skillIconText'>Heroku</span></div>
                 </div>
             </div>
 

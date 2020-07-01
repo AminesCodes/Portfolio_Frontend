@@ -1,21 +1,21 @@
-import React, { useState, useLayoutEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import {OverlayTrigger, Tooltip} from 'react-bootstrap';
+import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
-import {resumeLink} from '../assets/projects/projects';
+import { resumeLink } from '../assets/projects/projects';
+import { useCostumeDivHight } from '../getDimensionHook';
 
-export default function NavBar(props) {  
-    // eslint-disable-next-line  
-    const [ dimension, setDimension ] = useState({});
-    const targetRef = useRef();
+export default function NavBar(props) {
 
-    useLayoutEffect(() => {
-        const dim = targetRef.current.getBoundingClientRect()
-        setDimension(dim);
-        props.getNavBarHeight(dim.height);
-        // eslint-disable-next-line
-    }, targetRef.current)
+    const [ divHight, targetRef ] = useCostumeDivHight();
 
+    useEffect(() => {
+        props.getNavBarHeight(divHight);
+        
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [divHight]);
+
+    
     return (
         <nav ref={targetRef} className='navbar navbar-expand-md navbar-dark bg-dark position-fixed w-100' id='navbar' style={{zIndex: '5'}}>
             <OverlayTrigger
