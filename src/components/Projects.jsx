@@ -11,35 +11,6 @@ import { projects } from '../assets/projects/projects';
 
 export default function Projects(props) {
     const [ targetProject, setTargetProject ] = useState(null);
-    const [ screenWidth, setScreenWidth ] = useState(window.innerWidth);
-    
-    const handleResize = () => {
-        const width = window.innerWidth 
-        || document.documentElement.clientWidth 
-        || document.body.clientWidth;
-
-        const height = window.innerHeight 
-        || document.documentElement.clientHeight
-        || document.body.clientHeight;
-
-        setScreenWidth(width);
-        props.getScreenHeight(height);
-        setTimeout(() => {}, 500);
-    }
-
-    useEffect(() => {
-        const height = window.innerHeight 
-        || document.documentElement.clientHeight
-        || document.body.clientHeight;
-        
-        props.getScreenHeight(height);
-        // eslint-disable-next-line
-    }, [])
-
-    useEffect(() => {
-        window.addEventListener('resize', handleResize);
-        return () => window.addEventListener('resize', handleResize);
-    });
 
     useEffect(() => {
         const handleEscapeBtn = (e) => {
@@ -83,7 +54,7 @@ export default function Projects(props) {
             
             <div className='container-lg appSectionDark' style={{minHeight: `${h}px`}}>
                 <div className='text-center h2 cardTitle'>Some of my projects</div>
-                { screenWidth < 768
+                { props.screenWidth < 768
                     ? projects.map((project) => <ProjectCardRight key={project.title} project={project} selectProject={setTargetProject} />)
                     : projects.map((project, i) => {
                         if (i % 2) {

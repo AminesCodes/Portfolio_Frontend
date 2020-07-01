@@ -14,12 +14,12 @@ import { useCostumeDivHight } from '../getDimensionHook';
 export default function Footer(props) {
 
     const [ divHight, targetRef ] = useCostumeDivHight();
-    
+
     useEffect(() => {
-        props.getFooterHeight(divHight);
+        props.setFooterHeight(divHight);
         
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [divHight])
+    }, [divHight, props.heightUpdate])
     
 
     return (

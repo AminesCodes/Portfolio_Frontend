@@ -10,12 +10,12 @@ export default function NavBar(props) {
     const [ divHight, targetRef ] = useCostumeDivHight();
 
     useEffect(() => {
-        props.getNavBarHeight(divHight);
+        props.setNavBarHeight(divHight);
         
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [divHight]);
+    }, [divHight, props.heightUpdate]);
 
-    
+
     return (
         <nav ref={targetRef} className='navbar navbar-expand-md navbar-dark bg-dark position-fixed w-100' id='navbar' style={{zIndex: '5'}}>
             <OverlayTrigger

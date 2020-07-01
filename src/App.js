@@ -10,51 +10,60 @@ import Footer from './components/Footer';
 
 
 function App() {
-  const pingBackend = () => {
-    // axios.get('https://aminecode.herokuapp.com/');
-    // axios.get('https://endeavor-app.herokuapp.com/');
-    // axios.get('https://fashion-fprint.herokuapp.com/');
-    // axios.get('https://suit-app.herokuapp.com/');
-    // axios.get('https://tv-show-watchlist.herokuapp.com/');
-  }
-
-  useEffect(() => {
-    pingBackend();
-  }, []);
-
   const [ navBarHeight, setNavBarHeight ] = useState(0);
   const [ footerHeight, setFooterHeight ] = useState(0);
   const [ screenHeight, setScreenHeight ] = useState(0);
   const [ sectionInnerH, setSectionInnerH ] = useState(0);
-
-  const getNavBarHeight = dim => {
-    setNavBarHeight(dim);
+  const [ screenWidth, setScreenWidth ] = useState(0);
+  
+  const pingBackend = () => {
+    axios.get('https://aminecode.herokuapp.com/');
+    axios.get('https://endeavor-app.herokuapp.com/');
+    axios.get('https://fashion-fprint.herokuapp.com/');
+    axios.get('https://suit-app.herokuapp.com/');
+    axios.get('https://tv-show-watchlist.herokuapp.com/');
   }
 
-  const getFooterHeight = dim => {
-    setFooterHeight(dim);
-  }
+  const handleResize = () => {
+    const width = window.innerWidth 
+    || document.documentElement.clientWidth 
+    || document.body.clientWidth;
 
-  const getScreenHeight = dim => {
-    setScreenHeight(dim)
+    const height = window.innerHeight 
+    || document.documentElement.clientHeight
+    || document.body.clientHeight;
+
+    setScreenWidth(width);
+    setScreenHeight(height);
+    setTimeout(() => {}, 500);
   }
 
   useEffect(() => {
-    setSectionInnerH(screenHeight 
-      - (navBarHeight + footerHeight 
-          + 2 * 16 // p-3 of container div is 1rem = 16px
-        )); // missing the arrows icons
+    window.addEventListener('resize', handleResize);
+    return () => window.addEventListener('resize', handleResize);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  
+  useEffect(() => {
+    handleResize();
+    pingBackend();
+  }, []);
+
+
+  useEffect(() => {
+    const h = screenHeight - (navBarHeight + footerHeight + 2 * 16) // p-3 of container div is 1rem = 16px
+    setSectionInnerH(h);
 
   }, [navBarHeight, footerHeight, screenHeight])
 
   return (
     <div className="App">
-      <NavBar getNavBarHeight={getNavBarHeight}/>
-      <Home sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight}/>
-      <Skills sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight}/>
-      <Projects sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight} getScreenHeight={getScreenHeight}/>
-      <Contact sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight}/>
-      <Footer getFooterHeight={getFooterHeight}/>
+      <NavBar setNavBarHeight={setNavBarHeight} heightUpdate={screenHeight} />
+      <Home sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight} />
+      <Skills sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight} />
+      <Projects sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight} screenWidth={screenWidth} />
+      <Contact sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight} />
+      <Footer setFooterHeight={setFooterHeight} heightUpdate={screenHeight} />
     </div>
   );
 }
