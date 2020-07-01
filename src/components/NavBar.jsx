@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 
 import { resumeLink } from '../assets/projects/projects';
 import { useCostumeDivHight } from '../getDimensionHook';
 
 export default function NavBar(props) {
+    const history = useHistory();
 
     const [ divHight, targetRef ] = useCostumeDivHight();
 
@@ -24,7 +26,7 @@ export default function NavBar(props) {
                     <Tooltip id={`tooltip-top`}><strong>Home</strong></Tooltip>
                 }
             >
-                <AnchorLink className='navbar-brand' href='#home'>
+                <AnchorLink onClick={() => history.push('/')} className='navbar-brand' href='/home'>
                     <img className='img-fluid logo' src={require('../assets/Portfolio_Icon.png')} alt='app logo'/>
                 </AnchorLink>
             </OverlayTrigger>
@@ -35,19 +37,19 @@ export default function NavBar(props) {
             <div className='collapse navbar-collapse' id='collapsibleNavbar'>
                 <ul className='navbar-nav ml-auto'>
                     <li className='nav-item'>
-                        <AnchorLink className='nav-link mb-0 h6' href='#home'>Home</AnchorLink>
+                        <AnchorLink onClick={() => history.push('/')} className='nav-link mb-0 h6' href='/home'>Home</AnchorLink>
                     </li>
                     <li className='nav-item'>
-                        <AnchorLink className='nav-link mb-0 h6' href='#skills'>Skills</AnchorLink>
+                        <AnchorLink onClick={() => history.push('/skills')} className='nav-link mb-0 h6' href='/skills'>Skills</AnchorLink>
                     </li>
                     <li className='nav-item'>
-                        <AnchorLink className='nav-link mb-0 h6' href='#projects'>Projects</AnchorLink>
+                        <AnchorLink onClick={() => history.push('/projects')} className='nav-link mb-0 h6' href='/projects'>Projects</AnchorLink>
                     </li>
                     <li className='nav-item'>
                         <a className='nav-link mb-0 h6' href={resumeLink} target='_blank' rel='noopener noreferrer'>Resume</a>
                     </li>
                     <li className='nav-item'>
-                        <AnchorLink className='nav-link mb-0 h6' href='#contact'>Contact</AnchorLink>
+                        <AnchorLink onClick={() => history.push('/contact')} className='nav-link mb-0 h6' href='/contact'>Contact</AnchorLink>
                     </li>
                 </ul>
             </div>
