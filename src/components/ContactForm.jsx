@@ -27,13 +27,15 @@ export default function ContactForm() {
                 }
             } catch (err) {
                 window.alert('Sorry, something went wrong!');
+                console.log(err)
+                console.dir(err)
             }
         }
     }
 
     return (
         // <form className='was-validated' onSubmit={handleSubmitForm}>
-        <form className='' onSubmit={handleSubmitForm}>
+        <form className='' onSubmit={handleSubmitForm} autoComplete='on'>
             <div className='row md-form px-2 pt-3'>
                 <div className='form-group col-sm-3'>
                     <label htmlFor='nameField'> Name:</label>
@@ -54,7 +56,7 @@ export default function ContactForm() {
                             type='email'
                             id='emailField'
                             className='form-control textInput' 
-                            placeholder='Enter your email' 
+                            placeholder='Enter your email'
                             value={email}
                             onChange={e => setEmail(e.target.value)}
                             required />
@@ -81,7 +83,8 @@ export default function ContactForm() {
                         <textarea 
                             className='form-control textInput'
                             id='messageField'
-                            placeholder='Enter your message here' 
+                            placeholder='Enter your message here'
+                            autoComplete='off'
                             value={message}
                             onChange={e => setMessage(e.target.value)}
                             rows='5'
