@@ -48,9 +48,11 @@ export default function Skills(props) {
     return(
         <section className='container-fluid px-3 pb-3' id='skills' style={style}>
             <div style={{height: props.navBarH}}></div>
-            <AnchorLink className='d-block text-right' href='#home'>
-                <UpArrow className='navIcon'/>
-            </AnchorLink>
+            <div className='text-right'>
+                <AnchorLink href='#home'>
+                    <UpArrow className='navIcon'/>
+                </AnchorLink>
+            </div>
 
             <div className='container-lg appSectionLight mx-3-auto' style={{minHeight: `${h}px`}}>
                 <div className='text-center h2 pt-3'>My Stack:</div>
@@ -68,9 +70,11 @@ export default function Skills(props) {
                 </div>
             </div>
 
-            <AnchorLink className='d-block text-right' href='#projects'>
-                <DownArrow className='navIcon'/>
-            </AnchorLink>
+            <div className='text-right'>
+                <AnchorLink href='#projects'>
+                    <DownArrow className='navIcon'/>
+                </AnchorLink>
+            </div>
         </section>
     )
 }

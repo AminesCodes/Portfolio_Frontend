@@ -48,9 +48,11 @@ export default function Projects(props) {
     return(
         <section className='container-fluid pb-3' id='projects' style={style}>
             <div style={{height: props.navBarH}}></div>
-                <AnchorLink className='d-block text-right' href='#skills'>
+            <div className='text-right' >
+                <AnchorLink href='#skills'>
                     <UpArrow className='navIcon'/>
                 </AnchorLink>
+            </div>
             
             <div className='container-lg appSectionDark' style={{minHeight: `${h}px`}}>
                 <div className='text-center h2 cardTitle'>Some of my projects</div>
@@ -77,9 +79,11 @@ export default function Projects(props) {
                 :   null
             }
 
-            <AnchorLink className='d-block text-right' href='#contact'>
-                <DownArrow className='navIcon'/>
-            </AnchorLink>
+            <div className='text-right'>
+                <AnchorLink href='#contact'>
+                    <DownArrow className='navIcon'/>
+                </AnchorLink>
+            </div>
         </section>
     )
 }

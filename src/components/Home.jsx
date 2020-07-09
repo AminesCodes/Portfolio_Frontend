@@ -43,9 +43,11 @@ export default function Home(props) {
                 </div>
             </div>
 
-            <AnchorLink className='d-block text-right' href='#skills'>
-                <DownArrow className='navIcon'/>
-            </AnchorLink>
+            <div className='text-right'>
+                <AnchorLink href='#skills'>
+                    <DownArrow className='navIcon'/>
+                </AnchorLink>
+            </div>
         </section>
     )
 }
