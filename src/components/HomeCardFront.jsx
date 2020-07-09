@@ -19,7 +19,7 @@ export default (props) => {
                 a New York City based <br/>
                 Software Engineer. <br/>
                 <br />
-                <span className='textLink' onMouseEnter={() => props.handleHover(true)}>
+                <span className='textLink' onClick={() => props.handleHover(true)}>
                     Want to know more?
                 </span>
             </p>

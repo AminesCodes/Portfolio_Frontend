@@ -2,10 +2,7 @@ import React from 'react';
 
 export default (props) => {
     return (
-        <div className='h-100 text-justify p-3' 
-            onMouseLeave={() => props.handleHover(false)} 
-            onClick={() => props.handleHover(false)}
-        >
+        <div className='h-100 text-justify p-3' >
             <p>For as long as I can remember, I have always been curious about how things work passionate about technology.</p>
             <p>This curiosity and passion led me to a Bachelor of science in automation engineering technology.</p>  
             <p>Seeking new challenges after moving to New York City,
@@ -17,6 +14,9 @@ export default (props) => {
                 <br />
                 I also enjoy cycling even if it's only once in a while with all my responsibilities.
             </p>
+            <div className='text-right' >
+                <span className='textLink' onClick={() => props.handleHover(false)}> See less</span>
+            </div>
         </div>
     )
 }

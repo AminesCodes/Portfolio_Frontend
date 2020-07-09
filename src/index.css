@@ -93,8 +93,14 @@ code {
 
 .textLink {
   color: #00adb5;
-  font-weight: bolder;
+  font-weight: bold;
   border-bottom: dashed thin;
+  cursor: pointer;
+}
+.textLink:hover {
+  color: #eeeeee;
+  font-weight: bolder;
+  border-bottom: dashed;
 }
 
 .cardTitle {
