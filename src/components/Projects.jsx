@@ -29,8 +29,8 @@ export default function Projects(props) {
         window.addEventListener('click', handleClick);
 
         return () => {
-            window.addEventListener('keydown', handleEscapeBtn);
-            window.addEventListener('click', handleClick);
+            window.removeEventListener('keydown', handleEscapeBtn);
+            window.removeEventListener('click', handleClick);
         }
     });
 
