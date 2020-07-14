@@ -10,7 +10,7 @@ export default (props) => {
                 where I gained valuable technical and professional skills, through project based learning and team work.
             </p>
             <p>When I'm not in front of my computer, I'm even spending time with my family and taking care of my son Zakarya
-                or fixing things left and right (yes, I'm a handy man).
+                or fixing things left and right (yes, I'm a handy-man).
                 <br />
                 I also enjoy cycling even if it's only once in a while with all my responsibilities.
             </p>
