@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Route, Switch, useLocation, useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 import NavBar from './components/NavBar';
@@ -7,9 +8,19 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
+import Resume from './components/Resume';
 
 
 function App() {
+  const { pathname } = useLocation();
+  const history = useHistory();
+
+  const location = pathname.split('/')[1];
+  console.log(location)
+  if (location && !['skills', 'projects', 'contact'].includes(location)) {
+    history.push('/');
+  }
+
   const [ navBarHeight, setNavBarHeight ] = useState(0);
   const [ footerHeight, setFooterHeight ] = useState(0);
   const [ screenHeight, setScreenHeight ] = useState(0);
@@ -58,12 +69,17 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar setNavBarHeight={setNavBarHeight} heightUpdate={screenHeight} />
-      <Home sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight} />
-      <Skills sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight} />
-      <Projects sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight} screenWidth={screenWidth} />
-      <Contact sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight} />
-      <Footer setFooterHeight={setFooterHeight} heightUpdate={screenHeight} />
+      <Switch>
+        <Route path='/resume'><Resume /></Route>
+        <Route path='/'>
+          <NavBar setNavBarHeight={setNavBarHeight} heightUpdate={screenHeight} />
+          <Home sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight} />
+          <Skills sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight} />
+          <Projects sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight} screenWidth={screenWidth} />
+          <Contact sectionInnerDivH={sectionInnerH} navIconH={footerHeight} navBarH={navBarHeight} />
+          <Footer setFooterHeight={setFooterHeight} heightUpdate={screenHeight} />
+        </Route>
+      </Switch>
     </div>
   );
 }

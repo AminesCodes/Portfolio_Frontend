@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { OverlayTrigger, Tooltip } from 'react-bootstrap';
+// import { useHistory, NavLink } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 
-import { resumeLink } from '../assets/projects/projects';
 import { useCostumeDivHight } from '../getDimensionHook';
 
 export default function NavBar(props) {
@@ -46,7 +46,8 @@ export default function NavBar(props) {
                         <AnchorLink onClick={() => history.push('/projects')} className='nav-link mb-0 h6' href='/projects'>Projects</AnchorLink>
                     </li>
                     <li className='nav-item'>
-                        <a className='nav-link mb-0 h6' href={resumeLink} target='_blank' rel='noopener noreferrer'>Resume</a>
+                        <a href='/docs/Resume.pdf' className='nav-link mb-0 h6' target='_blank' rel='noopener noreferrer'>Resume</a>
+                        {/* <NavLink to='/resume' className='nav-link mb-0 h6' target='_blank' rel='noopener noreferrer'>Resume</NavLink> */}
                     </li>
                     <li className='nav-item'>
                         <AnchorLink onClick={() => history.push('/contact')} className='nav-link mb-0 h6' href='/contact'>Contact</AnchorLink>
